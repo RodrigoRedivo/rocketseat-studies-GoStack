@@ -1,7 +1,3 @@
-/**
- * Para criar User: name, email, password
- */
-
 interface TechObject {
   title: string;
   experience: number;
@@ -9,9 +5,9 @@ interface TechObject {
 
 interface CreateUserData {
   name?: string;
-  email: string;
+  email: string; // Array
   password: string;
-  techs: Array<string |  TechObject>;
+  techs: Array<string |  TechObject>; // vetores
 }
 
 export default function createUser({name , email, password}: CreateUserData) {

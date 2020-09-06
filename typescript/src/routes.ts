@@ -3,6 +3,7 @@ import createUser from './services/CreateUser';
 
 export function goTypescript(req: Request, res: Response) {
   const user = createUser({
+    name: 'Rodrigo Redivo',
     email: 'rodrigoredivo@gmail.com',
     password: '123456',
     techs: [
@@ -13,5 +14,5 @@ export function goTypescript(req: Request, res: Response) {
     ],
   });
 
-  return res.json({ message: 'Go TypeScript' });
+  return res.json({ message: `Go TypeScript ${user.name}` });
 }
